@@ -1,0 +1,11 @@
+venv
+.idea
+.mypy_cache
+.eggs
+__pycache__
+*.egg-info
+
+# vim swap
+*.swp
+
+tmp_local

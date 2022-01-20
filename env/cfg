@@ -1,0 +1,30 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg = !git lg1
+[user]
+	name = Jan Sakalos
+	email = sakalosj@gmail.com
+[core]
+	editor = vim
+	excludesfile = /home/sakalosj/.gitignore_global
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[pull]
+	ff = only
+[credential]
+	helper = store
+[remote "origin"]
+	url = https://github.com/sakalosj/env.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
