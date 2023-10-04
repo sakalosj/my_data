@@ -1,0 +1,21 @@
+set -o vi
+
+if [ -f /etc/network/interfaces ] ; then
+    MYIP=`awk '/address/{print $2}' /etc/network/interfaces | head -1`
+fi
+
+export TMOUT=999999
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTFILE=~/.bash_history_jsakalos
+export PS1="[\u@${MYIP}:\w]\\$ "
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+
+alias pb="cd /ghostcache/projects/proxy-b-test-framework; . ./venv/bin/activate"
+alias lt="cd /ghostcache/proxyb-load-test"
+alias ltd="cd /ghostcache/projects/proxyb-devqa-load-testing;. ./venv/bin/activate"
+alias va=". venv/bin/activate"
+alias ll="ls -la"
+alias hg="history|grep"
+alias pg="ps -ef|grep"
