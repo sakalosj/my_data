@@ -1,0 +1,3 @@
+[[VimWiki shortcuts]]
+
+[[Work TODO]]

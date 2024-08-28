@@ -1,0 +1,18 @@
+= weekly report =
+
+== cpu usage ==
+https://quill.qa.akamai.com/reports/cpu?test=CPU_USAGE_TEST_GQUIC_WEEKLY&measurement=client_rusage&client_server=parallel_akamai_quic_client_q50_0-rtt%2Fakamai_quic_server&request_processing=serial&request_processing=serial-reconnect&request_processing=parallel&highlight=2024-08-18
+
+parallel_clients: 75, connections_per_client: 1, requests_per_connection: 5, resource_size: 1,024 KB, parallel, POST, parallel_akamai_quic_client/akamai_quic_server:
+
+https://quill.qa.akamai.com/reports/cpu?test=CPU_USAGE_TEST_GQUIC_WEEKLY&measurement=throughput&client_server=parallel_akamai_quic_client%2Fakamai_quic_server&request_processing=serial&request_processing=serial-reconnect&request_processing=parallel&highlight=2024-08-18
+https://quill.qa.akamai.com/reports/cpu?test=CPU_USAGE_TEST_GQUIC_WEEKLY&measurement=duration&client_server=parallel_akamai_quic_client%2Fakamai_quic_server&request_processing=serial&request_processing=serial-reconnect&request_processing=parallel&highlight=2024-08-18
+
+
+== gquic regret ==
+https://quill.qa.akamai.com/regret/68147/67548/?base=ID-4&compare=c2s_sent_bytes&y_filter=ID-4&y_filter=ID-14
+https://quill.qa.akamai.com/regret/68147/67548/?base=ID-4&compare=duration&y_filter=ID-14
+
+
+== proxyb ==
+https://quill.qa.akamai.com/reports/proxyb-cpu?test=PROXYB_CPU_USAGE_TEST_NIGHTLY&testcase=test_500_client_connections%3Ah2

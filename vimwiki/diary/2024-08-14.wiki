@@ -1,0 +1,10 @@
+release testing
+https://track.akamai.com/jira/browse/QUICQA-3979
+
+graphs to discuss:
+https://quill.qa.akamai.com/reports/proxyb-cpu?test=PROXYB_CPU_USAGE_TEST_RELEASE&testcase=test_500mb_dwld_requests%3Ah3
+https://quill.qa.akamai.com/reports/proxyb-cpu?test=PROXYB_CPU_USAGE_TEST_RELEASE&testcase=test_500_client_connections%3Ah2
+
+
+TODO:
+check if memory usage bump is aligned with migration to alsi22

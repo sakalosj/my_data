@@ -4,17 +4,6 @@ echo Download vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-echo Update $USER bash aliases ...
-cat << EOF >> ~/.bash_aliases 
-
-alias pg="ps -ef|grep "
-alias hg="history |grep "
-
-alias va='source ./venv/bin/activate'
-alias ve='python3 -m venv ./venv'
-alias vd='deactivate'
-EOF
-
 
 echo Update $USER .vimrc
 cat << EOF >> ~/.vimrc
@@ -31,7 +20,13 @@ call plug#end()
 
 EOF
 
-echo Create $USER global git configuration
-cp .gitconfig ~/
-echo Create $USER .gitignore_global
-cp .gitignore_global ~/
+echo Update $USER .gvimrc
+cat << EOF >> ~/.fvimrc
+colorscheme desert
+set guioptions-=m  "menu bar
+set guioptions-=T  "toolbar
+set guioptions-=r  "scrollbar
+set lines=999 columns=999
+
+EOF
+
