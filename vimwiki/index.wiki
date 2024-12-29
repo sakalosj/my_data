@@ -1,3 +1,4 @@
 [[VimWiki shortcuts]]
 
 [[Work TODO]]
+

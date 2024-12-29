@@ -1,5 +1,4 @@
 
 * [X] check massif.out
-* [X] test
-* [ ] t
+* [X] perflab install
 
