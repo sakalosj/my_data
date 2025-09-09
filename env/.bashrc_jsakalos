@@ -32,4 +32,6 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 
 # export PS1='[\[\033[0;36m\]\u\[\033[0;37m\]@\[\033[0;36m\]\h\[\033[0;37m\]]-[\[\033[0;32m\]\w$(__git_ps1 " (%s)")\[\033[0;37m\]]\n\[\033[0;33m\]\#>>>\[\033[0;37m\]'
 export PS1='[\u@${MYIP}:\W/\[\e[32m\]$(__git_ps1 " (%s)")\[\e[m\]]\$ '
-
+if [ -f ~/.bash_aliases_jsakalos ]; then
+    source ~/.bash_aliases_jsakalos
+fi

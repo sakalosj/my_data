@@ -1,4 +1,6 @@
-[[VimWiki shortcuts]]
-
+[[Shortcuts]]
 [[Work TODO]]
+[[Work Notes]]
+[[Work projects]]
+[[Personal]]
 

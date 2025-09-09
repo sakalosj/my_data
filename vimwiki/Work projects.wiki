@@ -1,0 +1,10 @@
+akamai docker
+
+https://docs.docker.com/docker-hub/image-library/mirror/
+https://collaborate.akamai.com/confluence/pages/viewpage.action?spaceKey=ARTMA&title=Artifactory+User+Documentation
+https://artifact.akamai.com/ui/packages
+https://collaborate.akamai.com/confluence/display/ARTMA/Docker+registry+usage
+
+
+
+proxy

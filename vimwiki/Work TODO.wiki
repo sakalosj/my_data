@@ -1,4 +1,96 @@
+= TODO =
 
-* [X] check massif.out
-* [X] perflab install
+# Fri 2025-07-04 11:15
+  * [x] check failing chromium with original mirror and if it will create ticket
+  * [ ] 
+ 
+
+= Notes =
+
+== QUICQA-4265 ==
+
+currently skip info is auto-selected if slow build is detected and env variable is overrided
+
+== QUICQA-4279 ==
+
+  * [ ] where is test dir created? 
+        
+# skip decorator
+```  
+def skip_reporting_check(condition: bool = skip_reporting, return_value: Any = None):
+    """
+    Decorator to skip a function (sync or async) based on a condition function.
+
+    Args:
+        condition: A callable that returns True if the function should be skipped.
+        return_value: Value to return if skipped (default: None)
+    """
+
+    def decorator(func):
+        if inspect.iscoroutinefunction(func):
+
+            @functools.wraps(func)
+            async def async_wrapper(*args, **kwargs):
+                if condition:
+                    return return_value
+                return await func(*args, **kwargs)
+
+            return async_wrapper
+        else:
+
+            @functools.wraps(func)
+            def sync_wrapper(*args, **kwargs):
+                if condition:
+                    return return_value
+                return func(*args, **kwargs)
+
+            return sync_wrapper
+
+    return decorator
+```
+
+```comparisson
+def check_reporting_skip(fn):
+    @functools.wraps(fn)
+    def wrapper(*args, **kwargs):
+        if not environment.skip_reporting:
+            return fn(*args, **kwargs)
+        logger.info("Reporting checks are disabled, skipping %s", fn.__name__)
+        return None
+
+    return wrapper
+
+
+def decorate_staticmethods_only(decorator):
+    def decorate(cls):
+        for name, attr in cls.__dict__.items():
+            if isinstance(attr, staticmethod):
+                original_fn = attr.__func__
+                decorated = staticmethod(decorator(original_fn))
+                setattr(cls, name, decorated)
+        return cls
+
+    return decorate
+
+
+@decorate_staticmethods_only(check_reporting_skip)
+```
+    
+
+= Ideas =
+
+* [ ] fix auto downloading for vc branchces when branch name is more complex  `vc/1.1` vs. `vc/1.1-example`
+      https://git.source.akamai.com/projects/CTENG/repos/proxy-b-test-framework/browse/tools/download_binary.py#100
+* [ ] 
+
+
+= SIDE QUESTS = 
+
+* [ ] cleanup vscode tests after tests done (vxlan) - tasks?
+* [ ] blinking cursors
+* [ ] save ubuntu shortcuts  configuration
+* [x] vscode setup ENV in pytest
+* [x] vim tab > 2
+* [ ] add vim spell checker
+* [ ] update my_data
 

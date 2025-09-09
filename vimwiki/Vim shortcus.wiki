@@ -1,0 +1,4 @@
+v_mode
+
+v,i:
+\D - insert current date

@@ -1,0 +1,4 @@
+[[VimWiki shortcuts]]
+[[Vim shortcus]]
+[[ubuntu]]
+
