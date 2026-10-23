@@ -1,11 +1,15 @@
 venv
+.venv
 .idea
 .mypy_cache
 .eggs
 __pycache__
 *.egg-info
+todo
 
 # vim swap
 *.swp
 
 tmp_local
+_libs
+

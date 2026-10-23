@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=-1
+HISTFILESIZE=-1
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -105,6 +105,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# shared aliases (linked from ~/my_data/dotfiles/common/.aliases)
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -116,8 +121,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
-HISTFILESIZE=
-HISTSIZE=
+export EDITOR='vim'
+export VISUAL='vim'
+
+set -o vi
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+# uv / pipx installed tools
+export PATH="$HOME/.local/bin:$PATH"
 
 ### GIT
 # unstaged (*) and staged (+) changes will be shown next to the branch name
@@ -132,3 +143,9 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 # export PS1='[\[\033[0;36m\]\u\[\033[0;37m\]@\[\033[0;36m\]\h\[\033[0;37m\]]-[\[\033[0;32m\]\w$(__git_ps1 " (%s)")\[\033[0;37m\]]\n\[\033[0;33m\]\#>>>\[\033[0;37m\]'
 export PS1='[\u \W/\[\e[32m\]$(__git_ps1 " (%s)")\[\e[m\]]\$ '
 
+
+# >>>> Vagrant command completion (start)
+VAGRANT_COMPLETION=/opt/vagrant/embedded/gems/2.2.15/gems/vagrant-2.2.15/contrib/bash/completion.sh
+[ -f "$VAGRANT_COMPLETION" ] && . "$VAGRANT_COMPLETION"
+unset VAGRANT_COMPLETION
+# <<<<  Vagrant command completion (end)

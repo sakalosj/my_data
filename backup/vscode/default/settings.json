@@ -1,0 +1,53 @@
+{
+    "workbench.colorTheme": "Default Dark+ Experimental",
+    "files.autoSave": "onFocusChange",
+    "git.autofetch": true,
+    "terminal.external.osxExec": "iTerminal.app",
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "cSpell.userWords": [
+        "aiopath",
+        "caplog",
+        "goaway",
+        "ONLYDIR",
+        "proxyb",
+        "pytestmark",
+        "workdir"
+    ],
+    "editor.minimap.size": "fit",
+    "editor.minimap.enabled": false,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.autoImportUserSymbols": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.logLevel": "Error",
+    "python.analysis.typeCheckingMode": "basic",
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.testing.cwd": "",
+    "python.testing.pytestEnabled": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.linting.mypyEnabled": true,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/venv/": true
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "python.formatting.provider": "black",
+    "black-formatter.args": [
+        "--line-length 120"
+    ],
+    "editor.formatOnPaste": true,
+    "window.menuStyle": "custom",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "http.electronFetch": true,
+    "update.mode": "manual",
+    "remote.SSH.serverInstallPath": {
+        "jsakalos_dev": "/projects/"
+    },
+    "chat.viewSessions.orientation": "stacked",
+    "window.restoreWindows": "one"
+}

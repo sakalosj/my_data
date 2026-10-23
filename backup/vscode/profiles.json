@@ -1,0 +1,33 @@
+[
+  {
+    "location": "-56bb7403",
+    "name": "CppProfile",
+    "useDefaultFlags": {
+      "keybindings": true,
+      "settings": true
+    }
+  },
+  {
+    "location": "-1d6f12dc",
+    "name": "GoProfile",
+    "useDefaultFlags": {
+      "settings": true,
+      "keybindings": true,
+      "tasks": true,
+      "mcp": true
+    }
+  },
+  {
+    "location": "4edab12e",
+    "name": "PyProfile",
+    "useDefaultFlags": {}
+  },
+  {
+    "location": "794fedae",
+    "name": "markdown",
+    "icon": "book",
+    "useDefaultFlags": {
+      "keybindings": true
+    }
+  }
+]

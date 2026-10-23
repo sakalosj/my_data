@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # generate keys
 for key in internal deployed;  do echo $key; ssh-keygen -t rsa -b 2048 -C "`whoami`-${key}-`date +%Y-%m-%d`" -f ~/.ssh/${key}/`whoami`-${key}-`date +%Y-%m-%d` -N ""; done

@@ -1,0 +1,133 @@
+{
+    "files.autoSave": "onFocusChange",
+    "git.autofetch": true,
+    "terminal.external.osxExec": "iTerminal.app",
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "cSpell.userWords": [
+        "aiopath",
+        "caplog",
+        "goaway",
+        "ONLYDIR",
+        "proxyb",
+        "pytestmark",
+        "workdir"
+    ],
+    "editor.minimap.size": "fit",
+    "editor.minimap.enabled": false,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.autoImportUserSymbols": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.logLevel": "Error",
+    "python.analysis.typeCheckingMode": "basic",
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        }
+    },
+    "python.testing.cwd": "",
+    "python.testing.pytestEnabled": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/venv/": true
+    },
+    "editor.formatOnPaste": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "chat.viewSessions.orientation": "stacked",
+    "chat.tools.terminal.autoApprove": {
+        "command": true
+    },
+    "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+    "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+    "terminal.integrated.profiles.linux": {
+        ".bashrc_jsakalos": {
+            "path": "bash",
+            "icon": "terminal-bash",
+            "args": [
+                "--rcfile",
+                "/root/.bashrc_jsakalos"
+            ]
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": ".bashrc_jsakalos",
+    "editor.definitionLinkOpensInPeek": true,
+    "chat.tools.urls.autoApprove": {
+        "https://code.visualstudio.com": true,
+        "https://github.com/microsoft/vscode/wiki/*": true,
+        "https://example.com": {
+            "approveRequest": true,
+            "approveResponse": false
+        },
+        "https://docs.github.com": {
+            "approveRequest": false,
+            "approveResponse": true
+        },
+        "https://github.com": {
+            "approveRequest": false,
+            "approveResponse": true
+        }
+    },
+    "jupyter.askForKernelRestart": false,
+    "workbench.externalBrowser": "chrome",
+    "pgsql.copilot.accessMode": "ro",
+    "pgsql.serverGroups": [
+        {
+            "name": "Servers",
+            "id": "A0B62EE8-35DD-4B7F-B9D7-A4C594DF3718",
+            "isDefault": true
+        }
+    ],
+    "pgsql.connections": [
+        {
+            "id": "4787A8F5-203E-405A-B67B-97E14BA3CD01",
+            "groupId": "A0B62EE8-35DD-4B7F-B9D7-A4C594DF3718",
+            "authenticationType": "None",
+            "connectTimeout": 15,
+            "applicationName": "vscode-pgsql",
+            "clientEncoding": "utf8",
+            "sslmode": "require",
+            "sshSavePassword": true,
+            "savePassword": true,
+            "sslRootCertMode": "none",
+            "server": "quill.qa.akamai.com",
+            "user": "regret",
+            "expiresOn": 0,
+            "emptyPasswordInput": true,
+            "database": "regret",
+            "profileName": "regret-ro",
+            "password": "",
+            "sshPassword": ""
+        }
+    ],
+    "terminal.integrated.allowedLinkSchemes": [
+        "file",
+        "http",
+        "https",
+        "mailto",
+        "vscode",
+        "vscode-insiders",
+        "docker-desktop"
+    ],
+    "search.useReplacePreview": false
+}

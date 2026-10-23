@@ -1,0 +1,36 @@
+
+alias pg="ps -ef|grep -i"
+alias hg="history |grep -i"
+alias lg="ls -latr |grep -i"
+alias ls="ls -a"
+alias ll="ls -latr"
+
+alias va='. ./.venv/bin/activate'
+alias ve='uv venv'
+alias vd='deactivate'
+
+alias se='~/my_data/sync_env/sync_env.sh'
+
+alias ss='ssh root@172.24.97.70'
+
+s() {
+	ssh -t root@$1 bash --rcfile \~/.bashrc_jsakalos -i
+  }
+
+si() {
+  scp ~/my_data/dotfiles/remote/.bashrc_jsakalos ~/my_data/dotfiles/common/.inputrc root@$1:
+  scp ~/my_data/dotfiles/common/.aliases root@$1:.bash_aliases_jsakalos
+}
+
+alias pb="cd ~/projects/proxy-b-test-framework; . ./venv/bin/activate"
+alias smi="scp ~/my_data/dotfiles/remote/.bashrc_jsakalos ~/my_data/dotfiles/common/.inputrc root@172.25.128.185:"
+#alias sm="ssh -t root@172.24.97.70 -i ~jsakalos/.ssh/slaves.rsa \"bash --rcfile .bashrc_jsakalos -i\""
+#alias sm="ssh -t root@172.24.97.70 -i .ssh/internal/jsakalos-internal-2024-11-21 \"bash --rcfile .bashrc_jsakalos -i\""
+alias sm="ssh -t root@172.24.97.70  \"bash --rcfile .bashrc_jsakalos -i\""
+
+#alias sync_test="rsync -azv --delete root@172.24.97.70:/projects/proxy-b-test-framework/test.out/test/ /home/jsakalos/tmp/test"
+sync-test(){
+HOST="${1:-172.24.97.70}"
+rsync -azv --delete root@$HOST:/projects/proxy-b-test-framework/test.out/test/ $HOME/tmp/test/$HOST
+}
+

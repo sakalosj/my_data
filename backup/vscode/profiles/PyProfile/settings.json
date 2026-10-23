@@ -1,0 +1,221 @@
+{
+    "remote.SSH.serverInstallPath": {
+        "work": "/projects",
+        "home": "/projects"
+    },
+    "files.autoSave": "onFocusChange",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "python.formatting.provider": "black",
+    "black-formatter.args": [
+        "--line-length",
+        "120"
+    ],
+    "editor.formatOnType": true,
+    "keyboard.dispatch": "keyCode",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "u"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<C-r>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "redo"
+                }
+            ]
+        }
+    ],
+    "window.titleBarStyle": "custom",
+    "workbench.editor.enablePreview": false,
+    "debug.showBreakpointsInOverviewRuler": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.testing.pytestEnabled": true,
+    "testing.alwaysRevealTestOnStateChange": true,
+    "testing.showAllMessages": true,
+    "vim.showMarksInGutter": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "vim.useSystemClipboard": true,
+    "workbench.colorCustomizations": {},
+    "python.diagnostics.sourceMapsEnabled": true,
+    "workbench.enableExperiments": false,
+    "vsCodeGitWorktrees.worktrees.dir.path": "/projects/.worktrees",
+    "cSpell.userWords": [
+        "aioquic",
+        "Akamaill",
+        "Akamill",
+        "caplog",
+        "cauth",
+        "datagram",
+        "dgram",
+        "genbytes",
+        "gensize",
+        "levelname",
+        "MYIP",
+        "netdump",
+        "pcpap",
+        "proxyb",
+        "pytest",
+        "pytestmark",
+        "QUICQA",
+        "regregion",
+        "reqs",
+        "setenv",
+        "srcport",
+        "sslkeylog",
+        "urandom",
+        "valgrind",
+        "workdir"
+    ],
+    "gitlens.fileAnnotations.command": "blame",
+    "testing.automaticallyOpenPeekView": "never",
+    "testing.defaultGutterClickAction": "contextMenu",
+    "cSpell.diagnosticLevel": "Hint",
+    "black-formatter.importStrategy": "fromEnvironment",
+    "mypy-type-checker.preferDaemon": false,
+    "mypy-type-checker.importStrategy": "fromEnvironment",
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.completeFunctionParens": true,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash",
+            "args": [
+                "--rcfile",
+                "/root/.bashrc_jsakalos"
+            ]
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "git.autofetch": true,
+    "terminal.integrated.persistentSessionScrollback": 100000,
+    "terminal.integrated.scrollback": 100000,
+    "python.testing.pytestArgs": [
+        "--log-cli-level",
+        "DEBUG"
+    ],
+    "debugpy.debugJustMyCode": false,
+    "scm.workingSets.enabled": true,
+    "terminal.integrated.fontSize": 13,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "ruff.format.preview": false,
+    "notebook.defaultFormatter": "charliermarsh.ruff",
+    "excel-viewer.showInfo": false,
+    "notebook.lineNumbers": "on",
+    "workbench.localHistory.maxFileEntries": 500,
+    "python.envFile": "${workspaceFolder}/.vscode/.env",
+    "testing.followRunningTest": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "chat.tools.terminal.autoApprove": {
+        "/.*/": true,
+        // "source": true,
+        // "fbdl": true,
+        // "python": true,
+        // "url)\"": true,
+        // "find": true,
+        // "}": true,
+        // "ffprobe": true,
+        // "audio)\"": true,
+        // "jq": true,
+        // "awk": true,
+        // "print": true,
+        // "xargs": true,
+        // "python3": true,
+        // "description": true,
+        // "comment": true,
+        // "artist": true,
+        // "copyright)\"": true,
+        // "url}')": true,
+        // "is_reel_type}')": true
+    },
+    "chat.agent.thinkingStyle": "collapsedPreview",
+    "editor.minimap.size": "fill",
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#dd0531"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#61dafb"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Svelte Orange",
+            "value": "#ff3d00"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        },
+        {
+            "name": "Thunderbird Red",
+            "value": "#7c0a0a"
+        },
+        {
+            "name": "Red Oxide",
+            "value": "#630303"
+        },
+        {
+            "name": "Dark Chestnut Brown",
+            "value": "7a3d00"
+        }
+    ],
+    "workbench.editor.titleScrollbarVisibility": "visible",
+    "chat.viewSessions.orientation": "stacked",
+    "python.terminal.useEnvFile": true,
+    "workbench.browser.openLocalhostLinks": false,
+    "workbench.externalBrowser": "chrome",
+}
