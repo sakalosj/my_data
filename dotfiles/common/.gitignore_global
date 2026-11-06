@@ -13,3 +13,6 @@ todo
 tmp_local
 _libs
 
+
+# macOS Finder metadata
+.DS_Store
