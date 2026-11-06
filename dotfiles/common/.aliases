@@ -10,6 +10,7 @@ alias ve='uv venv'
 alias vd='deactivate'
 
 alias se='~/my_data/sync_env/sync_env.sh'
+alias svc='~/my_data/services/svc.sh'
 
 alias ss='ssh root@172.24.97.70'
 

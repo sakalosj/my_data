@@ -34,3 +34,9 @@ se -n <command>            # dry run
 Linked files are edited in place (changes show up in `git status`).
 On `link` conflicts the local file is saved as `<file>.bak.<timestamp>` and you
 choose to keep the repo version, take the local one, or merge in vimdiff.
+
+## Services
+
+Docker compose services (one per `services/<name>/` dir), run locally or deployed
+over ssh by `svc` (`services/svc.sh`). See [services/README.md](services/README.md)
+and [services/vault/README.md](services/vault/README.md).

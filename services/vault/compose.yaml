@@ -1,0 +1,37 @@
+name: vault
+
+services:
+  vault:
+    image: hashicorp/vault:${VAULT_VERSION:-1.21}
+    restart: unless-stopped
+    ports:
+      - "${VAULT_BIND:-0.0.0.0}:${VAULT_PORT:-8200}:8200"
+    environment:
+      VAULT_ADDR: https://127.0.0.1:8200
+      VAULT_CACERT: /vault/tls/vault.crt
+      SKIP_CHOWN: "true"   # config is a read-only bind mount
+      SKIP_SETCAP: "true"  # disable_mlock = true (raft storage)
+    volumes:
+      - ./config:/vault/config:ro
+      - ${VAULT_TLS_DIR:-./tls}:/vault/tls-src:ro
+      - vault-data:/vault/file
+    tmpfs:
+      - /vault/tls
+    # Copy the TLS key (0600, owned by the host user) into tmpfs readable by
+    # the vault user, then hand over to the stock entrypoint.
+    entrypoint: ["/bin/sh", "-ec"]
+    command:
+      - |
+        cp /vault/tls-src/vault.crt /vault/tls-src/vault.key /vault/tls/
+        chown -R vault:vault /vault/tls
+        chmod 0400 /vault/tls/vault.key
+        exec docker-entrypoint.sh server
+    healthcheck:
+      # exit code 2 = sealed, which still means the server is up
+      test: ["CMD-SHELL", "vault status >/dev/null 2>&1; [ $$? -ne 1 ]"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  vault-data:
