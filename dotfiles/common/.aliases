@@ -48,3 +48,5 @@ HOST="${1:-172.24.97.70}"
 rsync -azv --delete root@$HOST:/projects/proxy-b-test-framework/test.out/test/ $HOME/tmp/test/$HOST
 }
 
+alias code-work='code --user-data-dir ~/.vscode-copilot-work'
+alias code-personal='code --user-data-dir ~/.vscode-copilot-personal'
