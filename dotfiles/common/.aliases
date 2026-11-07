@@ -12,6 +12,19 @@ alias vd='deactivate'
 alias se='~/my_data/sync_env/sync_env.sh'
 alias svc='~/my_data/services/svc.sh'
 
+# vset <path> <field> [key=value ...]: set a vault kv field from a hidden prompt.
+# Value goes via stdin without trailing newline (not in argv/history);
+# patches an existing secret (other fields kept), creates it otherwise.
+vset() {
+	if [ $# -lt 2 ]; then echo "usage: vset <path> <field> [key=value ...]" >&2; return 2; fi
+	local vpath=$1 vfield=$2 vvalue vcmd=put
+	shift 2
+	printf '%s: ' "$vfield" >&2
+	IFS= read -rs vvalue; echo >&2
+	vault kv get "$vpath" >/dev/null 2>&1 && vcmd=patch
+	printf %s "$vvalue" | vault kv "$vcmd" "$vpath" "$@" "$vfield=-"
+}
+
 alias ss='ssh root@172.24.97.70'
 
 s() {
